@@ -16,7 +16,7 @@ import java.util.Random;
 public class UserByLogMain {
     public static void main(String[] args) throws IOException, InvalidArgumentException {
         // 使用 DebugConsumer 初始化 SensorsAnalytics
-        final SensorsAnalytics sa = new SensorsAnalytics(new SensorsAnalytics.ConcurrentLoggingConsumer("args[0]"));
+        final SensorsAnalytics sa = new SensorsAnalytics(new SensorsAnalytics.ConcurrentLoggingConsumer(args[0]));
         Random random = new Random();
         for (int i = 0; i < 5000000; i++) {
             Map<String, Object> properties = new HashMap<String, Object>();
